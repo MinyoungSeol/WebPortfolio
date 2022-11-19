@@ -1,0 +1,43 @@
+﻿
+      @media (max-width:1320px) {
+        #about { padding: 60px; }
+        .about_left { float:none; width:100%; }
+        .about_left img { max-width:350px; border-radius:0 }
+        .about_right { float:none; width:100%; padding-left:0; height:43%; margin-bottom:0 }
+        .about_right p { font-size:20px }
+      .about_right p:nth-of-type(4) { margin-top:20px; font-size:18px; line-height:30px; padding-bottom:30px }
+      .also img { width:30%; }
+      .workbox { position:relative; width:49%; overflow:hidden; display:inline-block; margin:50px 0px; }
+      .overlay_txt { font-size:14px; }
+      .overlay_txt a { width:70px; margin:10px auto 0; }
+      .overlay_txt span { display:block; padding:8px 16px; background:#555; color:#fff; 
+                                  cursor:pointer; width:70px; font-size:14px; }
+      .overlay_txt p {
+        font-size: smaller;
+      }
+      .left_cont { float:none; width:100%; margin-bottom:0; }
+      .right_cont { float:none; width:100%; padding-top:0; }
+
+      }
+
+      @media (max-width:798px) {
+        #nav { display:none }
+        .menu a { font-size:34px }
+        #main { margin-left:0}
+        #about { margin-left:0; padding:50px 25px 0; text-align:center }
+        #about .line { margin:30px auto}
+        .about_left { width:100%; height:35%; min-width:400px; }
+        .about_right { width:100%; padding-left:0; height:45%; min-width:400px; }
+        .about_right p:nth-of-type(4) { font-size:14px }
+        #media_nav { display:block }
+        #work { clear:both; margin-top:180px; margin-left:0; padding: 60px 40px 0}
+        #work h2 { text-align:center; }
+        #work .line { margin:30px auto; }
+        .workbox { width:100%; margin:0 auto; max-width:300px; margin-top:50px; }
+        .contactbox { margin:80px 0 0 0; }
+        .contactbox .line { margin:30px auto; }
+        .contactbox h2 { text-align:center; margin-bottom:80px; }
+        .contactbox form input, .contactbox button { margin:20px auto; }
+        /* .right_cont { padding;} */
+        footer { margin-left:0; }
+      }
