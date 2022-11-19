@@ -1,149 +1,115 @@
-﻿
-    @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
-    @import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+﻿@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
 
-      * { margin:0; padding:0; box-sizing:border-box }
-      body, html { height:100%; font-family: 'Jeju Gothic', sans-serif; }
-      a { text-decoration:none }
+  * { margin:0; padding:0; box-sizing:border-box }
+  body, html { height:100%; font-family: 'Jeju Gothic', sans-serif; }
+  a { text-decoration:none }
 
-      #nav { width:350px; background:#f1f1f1;
-                 position:fixed; min-height:100%; z-inedx:1; box-shadow:2px 0px 15px rgba(0,0,0,0.4);
-                 float:left; }
-      #nav img { width:150px; display:block; margin:50px auto; animation:fade 1s }
-      #nav hr { margin:30px auto; border:none; border-bottom:1px solid #aaa; width:60%; }
-      #nav h1 { text-transform:uppercase; font-weight:400; font-size:24px; width:60%; margin:0 auto;
-                    color:#555; cursor:default }
-      #nav p.me { text-transform:uppercase; font-size:18px; font-weight:bolder; padding:15px 0;
-                    color:#556a89; width:60%; margin:0 auto; cursor:default; 
-                    font-family:'jeju myeongjo', sans-serif }
-      #nav p.up { position:absolute; bottom:0; width:70px; height:50px; text-align:center; 
-                        left:40%; background:rosybrown; color:#fff; line-height:50px; font-size:22px;
-                       cursor:pointer; }
-      .menu { width:60%; margin:200px auto 0 }
-      .menu a { display:block; color:#eadede; width:50px; font-size:40px; margin-bottom:25px;
-                    text-transform:uppercase; font-weight:bolder }
-      .menu a:hover { color:#a98788; }
-
-      #media_nav { width:100%; position:fixed; top:0; left:0; z-index:3; display:none;
-                      height:70px; padding:0px 16px; background:#f3f3f3; 
-                      box-shadow:2px 0px 5px rgba(0,0,0,0.3) }
-      #media_nav img { width:70px; height:50px; float:left; display:inline-block; margin-top:10px}
-      #media_nav span { font-size:30px; float:right; display:inline-block; line-height:70px; margin-top:5px;
-                                   cursor:pointer }
-        #media_nav { display:none }
-      .media_menu { width:100%; height:40%; padding-top:70px; text-align:center;
-                            box-shadow:0 3px 4px rgba(0,0,0,0.2); display:none; background:#fff;
-                            position:fixed; margin-top:70px; left:0; top:0; }
-      .media_menu a { display:block; font-size:36px; color:#eadede;
-                               width:50px; margin:30px 65px; font-weight:bolder }
-      .media_menu a:hover { color:#a98788; }
-      i.fa-bars { color:rosybrown; }
-      .toggle { display:block }
+  #nav { width:350px; background:#f1f1f1; position:fixed; min-height:100%; z-inedx:1; box-shadow:2px 0px 15px rgba(0,0,0,0.4); float:left; }
+  #nav img { width:150px; display:block; margin:50px auto; animation:fade 1s }
+  #nav hr { margin:30px auto; border:none; border-bottom:1px solid #aaa; width:60%; }
+  #nav h1 { text-transform:uppercase; font-weight:400; font-size:24px; width:60%; margin:0 auto; color:#555; cursor:default }
+  #nav p.me { text-transform:uppercase; font-size:18px; font-weight:bolder; padding:15px 0; color:#556a89; width:60%; margin:0 auto; cursor:default; font-family:'jeju myeongjo', sans-serif }
+  #nav p.up { position:absolute; bottom:0; width:70px; height:50px; text-align:center; left:40%; background:rosybrown; color:#fff; line-height:50px; font-size:22px; cursor:pointer; }
+  .menu { width:60%; margin:200px auto 0 }
+  .menu a { display:block; color:#eadede; width:50px; font-size:40px; margin-bottom:25px; text-transform:uppercase; font-weight:bolder }
+  .menu a:hover { color:#a98788; }
+  #media_nav { width:100%; position:fixed; top:0; left:0; z-index:3; display:none; height:70px; padding:0px 16px; background:#f3f3f3; box-shadow:2px 0px 5px rgba(0,0,0,0.3) }
+  #media_nav img { width:70px; height:50px; float:left; display:inline-block; margin-top:10px}
+  #media_nav span { font-size:30px; float:right; display:inline-block; line-height:70px; margin-top:5px; cursor:pointer }
+  #media_nav { display:none }
+  .media_menu { width:100%; height:40%; padding-top:70px; text-align:center; box-shadow:0 3px 4px rgba(0,0,0,0.2); display:none; background:#fff; position:fixed; margin-top:70px; left:0; top:0; }
+  .media_menu a { display:block; font-size:36px; color:#eadede; width:50px; margin:30px 65px; font-weight:bolder }
+  .media_menu a:hover { color:#a98788; }
+  i.fa-bars { color:rosybrown; }
+  .toggle { display:block }
 
 
-      #main { min-height:100%; margin-left:350px; position:relative;
-                   background:url(../image/source/1.jpg) no-repeat center/cover fixed; filter:grayscale(50%); }
-      .main_quote { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%;
-                           text-align:center; opacity:0.9; animation:quote 2s }
-      #main hr { border:none; border-top:1px solid #fff; width:65%; display:block; margin:0 auto }
-      #main p { color:#fff; font-family: 'Jeju Myeongjo', serif; font-weight:400; font-size:24px;
-                     padding:30px; text-shadow:2px 2px 5px rgba(0,0,0,0.5); line-height:40px;
-                     filter:grayscale(80%); }
-      #main span { font-weight:bolder; font-size:35px }
+  #main { min-height:100%; margin-left:350px; position:relative; background:url(../image/source/1.jpg) no-repeat center/cover fixed; filter:grayscale(50%); }
+  .main_quote { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%; text-align:center; opacity:0.9; animation:quote 2s }
+  #main hr { border:none; border-top:1px solid #fff; width:65%; display:block; margin:0 auto }
+  #main p { color:#fff; font-family: 'Jeju Myeongjo', serif; font-weight:400; font-size:24px; padding:30px; text-shadow:2px 2px 5px rgba(0,0,0,0.5); line-height:40px; filter:grayscale(80%); }
+  #main span { font-weight:bolder; font-size:35px }
 
 
-      #about { margin-left:350px; padding:60px 80px 0; overflow:hidden; }
-      .line_box { position:relative; top:-50px; opacity:0; transition:2.5s ease; }
-      #about .line { border:none; border-top:4px solid #a88987; width:170px; margin-bottom:15px }
-      #about h2 { text-transform:uppercase; margin-bottom:40px; font-size:36px; font-weight:500;
-                         letter-spacing:-2px }
-      .about_left { float:left; width:35%; height:50% }
-      .about_left img { width:95%; min-width:200px; border-radius:50%; min-height:250px }
-      .about_right { float:right; width:65%; height:50%; padding-left:50px; margin-bottom:70px; 
-                           position:relative; right:-500px; opacity:0; transition:2s ease; }
-      .about_right p { font-size:24px; color:#555; line-height:60px; margin:20px 0 }
-      .about_right p:nth-of-type(4) { margin-top:40px; font-size:20px; line-height:30px }
-      #about .line2 { clear:both; width:100%; border:none; border-bottom:1px solid gray }
+  #about { margin-left:350px; padding:60px 80px 0; overflow:hidden; }
+  .line_box { position:relative; top:-50px; opacity:0; transition:2.5s ease; }
+  #about .line { border:none; border-top:4px solid #a88987; width:170px; margin-bottom:15px }
+  #about h2 { text-transform:uppercase; margin-bottom:40px; font-size:36px; font-weight:500; letter-spacing:-2px }
+  .about_left { float:left; width:35%; height:50% }
+  .about_left img { width:95%; min-width:200px; border-radius:50%; min-height:250px }
+  .about_right { float:right; width:65%; height:50%; padding-left:50px; margin-bottom:70px; position:relative; right:-500px; opacity:0; transition:2s ease; }
+  .about_right p { font-size:24px; color:#555; line-height:60px; margin:20px 0 }
+  .about_right p:nth-of-type(4) { margin-top:40px; font-size:20px; line-height:30px }
+  #about .line2 { clear:both; width:100%; border:none; border-bottom:1px solid gray }
 
-      .skill { width:100%; }
-      .skill h3 { font-size:32px; margin:70px 0; font-weight:500; letter-spacing:2px; color:#333; text-align:center; }
-      .skill span { color:#a98788; letter-spacing:5px; text-align:center; display:block; }
-      .graybar { width:70%; height:30px; background:#f1f1f1; margin:25px auto; border-radius: 10px;}
-      #bluebar { height:100%; background:#556a89; border-radius: 10px;}
-      .bluebar1 { width:0; /*animation:blue1 2.5s ease;*/ transition:2s ease; }
-      .bluebar2 { width:0; /*animation:blue2 2.5s ease;*/ transition:2s ease; }
-      .bluebar3 { width:0; /*animation:blue3 2.5s ease;*/ transition:2s ease; }
-      .bluebar4 { width:0; /*animation:blue1 2.5s ease;*/ transition:2s ease; }
-      .bluebar5 { width:0; /*animation:blue2 2.5s ease;*/ transition:2s ease; }
-      .bluebar6 { width:0; /*animation:blue3 2.5s ease;*/ transition:2s ease; }
-      .bluebar7 { width:0; /*animation:blue3 2.5s ease;*/ transition:2s ease; }
+  .skill { width:100%; }
+  .skill h3 { font-size:32px; margin:70px 0; font-weight:500; letter-spacing:2px; color:#333; text-align:center; }
+  .skill span { color:#a98788; letter-spacing:5px; text-align:center; display:block; }
+  .graybar { width:70%; height:30px; background:#f1f1f1; margin:25px auto; border-radius: 10px;}
+  #bluebar { height:100%; background:#556a89; border-radius: 10px;}
+  .bluebar1 { width:0; /*animation:blue1 2.5s ease;*/ transition:2s ease; }
+  .bluebar2 { width:0; /*animation:blue2 2.5s ease;*/ transition:2s ease; }
+  .bluebar3 { width:0; /*animation:blue3 2.5s ease;*/ transition:2s ease; }
+  .bluebar4 { width:0; /*animation:blue1 2.5s ease;*/ transition:2s ease; }
+  .bluebar5 { width:0; /*animation:blue2 2.5s ease;*/ transition:2s ease; }
+  .bluebar6 { width:0; /*animation:blue3 2.5s ease;*/ transition:2s ease; }
+  .bluebar7 { width:0; /*animation:blue3 2.5s ease;*/ transition:2s ease; }
 
 
-      .also { width:70%; margin:25px auto; }
-      .also h3 { font-size:32px; margin:70px 0; font-weight:500; letter-spacing:2px; color:#333; text-align:center; }
-      .also img { width:32%; }
+  .also { width:70%; margin:25px auto; }
+  .also h3 { font-size:32px; margin:70px 0; font-weight:500; letter-spacing:2px; color:#333; text-align:center; }
+  .also img { width:32%; }
 
-      #work { clear:both; margin:180px 0 70px 350px; padding:60px 80px 0; margin-top:180px; }
-      #work .line { border:none; border-top:4px solid #a88987; width:175px; margin-bottom:15px }
-      #work h2 { text-transform:uppercase; margin-bottom:40px; font-size:36px; font-weight:500;
-                         letter-spacing:-2px }
+  #work { clear:both; margin:180px 0 70px 350px; padding:60px 80px 0; margin-top:180px; }
+  #work .line { border:none; border-top:4px solid #a88987; width:175px; margin-bottom:15px }
+  #work h2 { text-transform:uppercase; margin-bottom:40px; font-size:36px; font-weight:500; letter-spacing:-2px }
 
-      .workwrap { text-align:center }
-      .workbox { position:relative; width:35%; overflow:hidden; display:inline-block; margin:50px 15px; border-radius: 10px; }
-      .workbox img { width:100%; height:100%; border-radius: 10px;}
-      .overlay { width:100%; height:100%; background:#a88987;
-                      position:absolute; bottom:100%; left:0; transition:0.7s ease; border-radius: 10px; }
-      .overlay_txt { color:#fff; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); 
-                           font-size:20px; cursor:default; }
-      .overlay_txt p {
-        font-size:medium;
-        font-weight: 200;
-      }
-      .overlay_txt a { color:#fff; display:block; width:100px; margin:25px auto 0}
-      .overlay_txt span { display:block; padding:8px 16px; background:#555; color:#fff; 
-                                  cursor:pointer; width:100px; }
-      .workbox:hover .overlay { bottom:0 }
+  .workwrap { text-align:center }
+  .workbox { position:relative; width:35%; overflow:hidden; display:inline-block; margin:50px 15px; border-radius: 10px; }
+  .workbox img { width:100%; height:100%; border-radius: 10px;}
+  .overlay { width:100%; height:100%; background:#a88987; position:absolute; bottom:100%; left:0; transition:0.7s ease; border-radius: 10px; }
+  .overlay_txt { color:#fff; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:20px; cursor:default; }
+  .overlay_txt p { font-size:medium; font-weight: 200; }
+  .overlay_txt a { color:#fff; display:block; width:100px; margin:25px auto 0}
+  .overlay_txt span { display:block; padding:8px 16px; background:#555; color:#fff; cursor:pointer; width:100px; }
+  .workbox:hover .overlay { bottom:0 }
 
-      #contact { width:100%; height:400px; background:url(../image/contact.jpg) no-repeat center/cover fixed }
-      .contactbox { clear:both; margin:80px 0 0 350px; padding:30px 80px 0; }
-      .contactbox .line { border:none; border-top:4px solid #a88987; width:165px; margin-bottom:15px }
-      .contactbox h2 { text-transform:uppercase; margin-bottom:40px; font-size:36px; font-weight:500;
-                         letter-spacing:-2px }
+  #contact { width:100%; height:400px; background:url(../image/contact.jpg) no-repeat center/cover fixed }
+  .contactbox { clear:both; margin:80px 0 0 350px; padding:30px 80px 0; }
+  .contactbox .line { border:none; border-top:4px solid #a88987; width:165px; margin-bottom:15px }
+  .contactbox h2 { text-transform:uppercase; margin-bottom:40px; font-size:36px; font-weight:500; letter-spacing:-2px }
 
-      .left_cont {float:left; width:49%; margin-bottom:50px; height:400px; }
-      .left_cont form { width:100%; }
-      .left_cont form input { display:block; width:100%; padding:16px 32px; margin-bottom:32px; border-radius: 10px;
-                                        border:none; background:#eee; color:#a88987; font-size:18px; outline:none; }
-      .left_cont button { display:block; width:50%; padding:16px 32px; background:#a88987; color:#eee; border-radius: 10px;
-                                  border:none; font-size:18px; outline:none; cursor:pointer; text-align:center; }
+  .left_cont {float:left; width:49%; margin-bottom:50px; height:400px; }
+  .left_cont form { width:100%; }
+  .left_cont form input { display:block; width:100%; padding:16px 32px; margin-bottom:32px; border-radius: 10px; border:none; background:#eee; color:#a88987; font-size:18px; outline:none; }
+  .left_cont button { display:block; width:50%; padding:16px 32px; background:#a88987; color:#eee; border-radius: 10px; border:none; font-size:18px; outline:none; cursor:pointer; text-align:center; }
 
-      .right_cont { float:right; width:49%; height:250px; padding-top:45px; }
-      .right_cont .free { text-align:center; letter-spacing:2px; line-height:24px; font-size:18px;
-                                 color:#a88987; }
-      .right_cont hr { width:50px; margin:30px auto; }
-      .right_cont .mycont { margin:16px 0; letter-spacing:3px; text-align:center; color:#555; }
-      .mycont i { margin-right:15px; font-size:18px; }
+  .right_cont { float:right; width:49%; height:250px; padding-top:45px; }
+  .right_cont .free { text-align:center; letter-spacing:2px; line-height:24px; font-size:18px; color:#a88987; }
+  .right_cont hr { width:50px; margin:30px auto; }
+  .right_cont .mycont { margin:16px 0; letter-spacing:3px; text-align:center; color:#555; }
+  .mycont i { margin-right:15px; font-size:18px; }
 
-      footer { height:50px; background:#555; color:#fff; margin-left:350px; text-align:center;
-                  line-height:50px; font-size:12px; clear:both; }
+  footer { height:50px; background:#555; color:#fff; margin-left:350px; text-align:center; line-height:50px; font-size:12px; clear:both; }
 
-      @keyframes fade {
-        0% { opacity:0 }
-        100% { opacity:1 }
-      }
-      @keyframes quote {
-        0% { top:30%; opacity:0; }
-        100% { top:50%; opacity:1; }
-      }
-      @keyframes blue1 {
-        0% { width:0 }
-        100% { width:70% }
-      }
-      @keyframes blue2 {
-        0% { width:0 }
-        100% { width:50% }
-      }
-      @keyframes blue3 {
-        0% { width:0 }
-        100% { width:90% }
-      }
+  @keyframes fade {
+    0% { opacity:0 }
+    100% { opacity:1 }
+  }
+  @keyframes quote {
+    0% { top:30%; opacity:0; }
+    100% { top:50%; opacity:1; }
+  }
+  @keyframes blue1 {
+    0% { width:0 }
+    100% { width:70% }
+  }
+  @keyframes blue2 {
+    0% { width:0 }
+    100% { width:50% }
+  }
+  @keyframes blue3 {
+    0% { width:0 }
+    100% { width:90% }
+  }
